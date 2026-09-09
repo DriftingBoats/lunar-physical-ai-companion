@@ -39,3 +39,7 @@ PWA编辑带revision，source_type不可改；删除事务先过滤查询、再�
 检索加retention_tier、subject、时态有效性与epistemic_status过滤，排序分离relevance/importance/recency。按历史日期检索时允许superseded版本，当前事实不混入旧值。derived_from记录摘要、关系判断和主动候选对证据的依赖，删除/纠正后级联失效。
 
 新增MemoryService缓存失效消息处理与RecallController：Core在前台空闲检查候选、在线验证版本/权限/有效期后显示邀请；A确认播放，B跳过。全局关闭、勿扰、睡眠、正在录音及候选过期均禁止打断。展示回执按plan_id去重，重启不补播。
+
+## Ombre Brain 参考补充
+
+按13实现方案使用 source_refs、独立reflection通道和surface_state；Core不计算全库活跃度，不保存向量。上下文最多1条反思，与其他记录共享5条/8KiB；普通事实查询排除反思。 共同约束见 [13 记忆实现方案](../../13-Ombre-Brain参考与记忆实现方案.md)。
