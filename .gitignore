@@ -1,0 +1,44 @@
+# Local secrets and credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+credentials.json
+
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+
+# Node / frontend
+node_modules/
+dist/
+.vite/
+
+# IDE and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Runtime data and private media
+*.db
+*.sqlite
+*.sqlite3
+data/
+storage/
+private-media/
+user-audio/
+
+# Build outputs and device dumps
+build/
+firmware/.pio/
+firmware/.cache/
+*.bin
+*.elf
+*.map
+
+# Local test records that may contain personal data
+docs/records/private/
