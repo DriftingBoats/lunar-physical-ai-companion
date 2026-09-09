@@ -29,3 +29,13 @@ PWA编辑带revision，source_type不可改；删除事务先过滤查询、再�
 ## 验收
 
 三类正反例、1万条主库/Core内存恒定、无证据问答、故事污染、编辑冲突、删除后重连、旧备份恢复、满outbox、重复ACK、换角色与设备。
+
+## 分层与关系执行层
+
+新增 RetentionPolicy、TemporalResolver、ImportanceScorer、ConsolidationWorker、RelationshipRepository 和 RecallPlanner，规则唯一来源为 [分层记忆规格](../../12-人格关系与分层记忆系统.md)。它们在云端处理完整历史；Core 只提供有效时间、当前焦点、实际角色版本和有限缓存。
+
+云端先持久化允许事件再ACK，评分/整理异步执行，不阻塞同步和2秒检索。评分任务携带memory_id、revision、model_version与score_version；重复任务不累计分数，旧revision结果不覆盖新编辑。短期到期前触发整理；提醒、outbox和用户固定项使用独立保留规则。
+
+检索加retention_tier、subject、时态有效性与epistemic_status过滤，排序分离relevance/importance/recency。按历史日期检索时允许superseded版本，当前事实不混入旧值。derived_from记录摘要、关系判断和主动候选对证据的依赖，删除/纠正后级联失效。
+
+新增MemoryService缓存失效消息处理与RecallController：Core在前台空闲检查候选、在线验证版本/权限/有效期后显示邀请；A确认播放，B跳过。全局关闭、勿扰、睡眠、正在录音及候选过期均禁止打断。展示回执按plan_id去重，重启不补播。

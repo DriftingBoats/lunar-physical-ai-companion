@@ -12,6 +12,10 @@ pages分DeviceHome、Character、Brain、Memory、Plugins、DeviceSettings；Rem
 
 ## PWA配置
 
+Memory增加retention_tier、source、subject、日期与重要性筛选，详情分别展示现实/故事时间、valid_to与expired/superseded状态。分数旁给简短理由，展开才出现分项；“长期保存”“不再主动提及”“删除”是不同操作，不共用一个开关。
+
+“我们之间”读取relationship_state和证据条目，用户可确认称呼/关系与纠正推断；缺证据时标待确认。Character显示learning proposals，接受后生成新preset版本并等待设备ACK。主动回忆设置由云保存并撤销候选，设备同步后显示已应用；离线修改只存草稿，不假承诺即时停止其他设备。
+
 manifest定义id、name、short_name、start_url、scope、display=standalone、theme_color、background_color和192/512图标；另提供Apple touch icon。路径按实际部署子目录一致配置，不能start_url越scope。HTTPS用于正式部署。
 
 service worker预缓存带hash的静态壳；导航network-first并离线回退；私密API默认network-only，不缓存POST和凭据。需要离线草稿时用按用户分区的IndexedDB，只存必要表单，不缓存API key。退出或换账号清理该用户草稿和私密缓存，并告知未提交草稿会丢失。
