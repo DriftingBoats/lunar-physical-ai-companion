@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Lunar · 首屏实验室</title><link rel="stylesheet" href="/style.css"><link rel="stylesheet" href="/hardware.css"></head>
+<body>
+  <header><a href="/">☾ LUNAR <span>首屏实验室</span></a><span class="badge">设备模拟 · 无需连接硬件</span></header>
+  <main>
+    <section class="intro"><p class="eyebrow">HOME · PRD 6–16 / M02 / M03 / M06</p><h1>Lunar 的生活现场</h1><p>默认自动作息，离线也会生活。<br>形象参考 @lunar_GMMTV，毛绒素材适配预览。</p></section>
+    <section class="preview" aria-label="设备预览">
+      <div class="hardware-caption">STACKCHAN CORE + FACES GAMEPAD3 <span>官方正面照片 / 尺寸图校准</span></div>
+      <div class="device">
+        <span class="dimension width-dimension">54 mm</span><span class="dimension height-dimension">108 mm · 底座</span>
+        <div class="core"><div class="screen"><canvas id="screen" width="320" height="240" aria-label="Lunar 320×240 模拟屏幕"></canvas><span id="status" class="sr-only" aria-live="polite"></span></div><div class="sensors" aria-hidden="true"><i></i><i class="camera"></i><i></i><i></i><i></i></div></div>
+        <div class="controls">
+          <div class="dpad" aria-label="四向按键"><button id="up" aria-label="方向上">▴</button><button id="left" aria-label="方向左">◂</button><button id="right" aria-label="方向右">▸</button><button id="down" aria-label="方向下">▾</button></div>
+          <div class="actions"><button id="b" aria-label="B 返回或取消"><span>B</span></button><button id="a" aria-label="A 短按互动，长按模拟讲话"><span>A</span></button></div>
+          <div class="utility"><button id="select" aria-label="Select 当天状态"><span>SELECT</span></button><button id="start" aria-label="Start 功能菜单"><span>START</span></button></div>
+          <div class="device-brand">M5STACK</div>
+        </div>
+      </div>
+      <p class="hardware-note">2.0″ · 320 × 240 · 等比例放大，非屏幕物理 1:1<br>Gamepad3 A004-V3 · 布局参考官方尺寸图</p>
+      <p class="hint">A 短按打招呼 · 按住模拟讲话 · B 取消<br>键盘 A / B / Enter（Start）/ S（Select）<br><span id="input-status" aria-live="polite">四向键可点击检查输入，Home 不执行导航</span></p>
+    </section>
+    <aside><p class="eyebrow">测试输入 · 不属于设备首页</p><h2>场景验证</h2>
+      <label>行为模式<select id="life"><option value="auto">自动生活 · 默认 22:30–08:00 睡眠</option><option value="idle">预览：发呆</option><option value="play">预览：玩小物件</option><option value="observe">预览：看窗外</option><option value="sleep">预览：睡觉</option><option value="wake">预览：刚醒</option><option value="away">预览：空房间</option><option value="return">预览：返程与纪念物</option></select></label>
+      <label>场景时间<select id="time"><option value="live">跟随电脑时间</option><option value="day">测试上午 · 09:41</option><option value="night">测试睡眠 · 23:00</option></select></label>
+      <label>天气输入（模拟）<select id="weather"><option value="unknown">未知 · 隐藏天气</option><option value="clear">晴 · 27°C</option><option value="rain">下雨 · 24°C</option><option value="hot">高温 · 35°C</option></select></label>
+      <label>电量<select id="battery"><option value="82">82%</option><option value="15">15% · 低电量</option><option value="unknown">未知</option></select></label><label class="toggle">模拟联网<input type="checkbox" id="online" checked></label><label class="toggle">临近提醒<input type="checkbox" id="reminder"></label>
+      <p class="note">自动行为每 30–180 秒检查切换。<br>毛绒形象根据指定账号生成适配，非官方原始素材。四个姿态用于状态预览，尚非完整逐帧动画。性格来自公开表达归纳，台词为中文适配。语音、天气、提醒和旅行为模拟。</p></aside>
+  </main><footer>HOME / 01 <span>一个属于她，也属于你的小角落。</span></footer><script type="module" src="/app.js"></script>
+</body></html>

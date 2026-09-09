@@ -1,0 +1,51 @@
+/* Front-view reference: 54 × 108 mm base, 54 × 54 mm Core.
+   Nominal 2-inch 4:3 active area: 40.64 × 30.48 mm.
+   Key centers and sensor details are photo estimates, not CAD dimensions. */
+main{align-content:center;min-height:calc(100vh - 165px);padding-top:45px;padding-bottom:45px}
+.preview{padding:0 24px;min-width:0}
+.hardware-caption{font-size:10px;letter-spacing:1px;text-align:center;margin:0 0 38px;color:#707a6b}.hardware-caption span{display:block;font-size:10px;margin-top:7px;color:#93998c}
+.device{position:relative;width:100%;max-width:324px;aspect-ratio:54/108;padding:0;background:#d7d7d5;border:0;border-radius:4% 4% 5% 5%;box-shadow:0 4px 0 #9b9c99,4px 7px 0 #b2b3af,0 20px 32px #30362d22;container-type:inline-size}
+.core{position:absolute;top:0;left:0;width:100%;height:50%;background:linear-gradient(130deg,#242629,#111214);border:4px solid #c8caca;border-radius:7%;box-shadow:0 2px 2px #2228,inset 0 0 0 2px #53565a;z-index:1}
+.screen{position:absolute;left:12.37%;top:19.25%;width:75.26%;height:auto;border:0;border-radius:0;background:#111;overflow:hidden}
+.sensors{position:absolute;left:22%;right:22%;top:87%;height:8%;display:flex;align-items:center;justify-content:space-around;gap:4%}.sensors i{width:4%;aspect-ratio:1;border-radius:50%;background:#090a0b;box-shadow:inset 0 0 0 1px #5d6063}.sensors .camera{width:10%;background:radial-gradient(circle,#263f50 15%,#07090b 35%,#35393e 40%,#101214 60%,#777a7b 65%,#151719 75%)}
+.controls{position:absolute;top:50%;left:0;width:100%;height:50%;display:block;padding:0;border-top:2px solid #b8bab7;border-radius:0 0 9% 9%;background:linear-gradient(115deg,#d9d9d7,#c4c5c3)}
+.dpad{position:absolute;left:12%;top:19%;width:34%;height:34%}.dpad button{position:absolute;width:31%;height:31%;padding:0;background:linear-gradient(140deg,#3b3d3e,#252728);color:#626665;border-radius:18%;box-shadow:0 2px 1px #151716;font-size:16px;font-size:5cqw}.dpad #up{left:34.5%;top:0;clip-path:polygon(5% 0,95% 0,100% 75%,50% 100%,0 75%)}.dpad #down{left:34.5%;bottom:0;clip-path:polygon(50% 0,100% 25%,95% 100%,5% 100%,0 25%)}.dpad #left{left:0;top:34.5%;clip-path:polygon(0 5%,75% 0,100% 50%,75% 100%,0 95%)}.dpad #right{right:0;top:34.5%;clip-path:polygon(0 50%,25% 0,100% 5%,100% 95%,25% 100%)}
+.actions{position:absolute;inset:0;display:block;pointer-events:none}.actions button,.utility button{position:absolute;width:11%;height:11%;padding:0;border-radius:50%;background:linear-gradient(130deg,#414344,#292b2d);box-shadow:0 2px 1px #17191a,inset 0 1px 1px #656665;pointer-events:auto;color:#777c7c}.actions #a{left:77%;top:17%;transform:none}.actions #b{left:61%;top:34%}.actions span{position:absolute;top:-65%;left:0;width:100%;font-size:11px;font-size:3.4cqw;color:#949794;text-shadow:0 1px #eee}
+.utility{position:absolute;inset:0;display:block;pointer-events:none}.utility #select{left:33%;top:73%}.utility #start{left:58%;top:73%}.utility span{position:absolute;top:-60%;left:-65%;width:230%;font-size:9px;font-size:2.8cqw;letter-spacing:.3px;color:#929691;text-shadow:0 1px #efefea}
+.device-brand{position:absolute;bottom:4%;left:0;width:100%;margin:0;text-align:center;color:#aaaeaa;font-size:12px;font-size:3.7cqw;letter-spacing:1px;text-shadow:0 1px #e7e8e4}
+.dimension{position:absolute;color:#8b9286;font-size:10px;letter-spacing:1px;pointer-events:none}.width-dimension{left:0;top:-23px;width:100%;text-align:center;border-top:1px solid #bdc4b6;padding-top:3px}.height-dimension{right:-25px;top:0;height:100%;writing-mode:vertical-rl;text-align:center;border-right:1px solid #bdc4b6;padding-right:5px}.hardware-note{text-align:center;font-size:10px;line-height:1.9;color:#93998c;margin:20px -24px 0}.hint{margin-top:12px;font-size:10px}
+.actions #a{left:83%;top:26%}.actions #b{left:64%;top:34%}.dpad{left:9%;top:18%}.utility #select{left:33%;top:78%}.utility #start{left:55%;top:78%}
+@media(max-width:1050px){main{align-content:start;gap:30px}.intro{margin-bottom:0}.preview{width:100%}}
+@media(max-width:700px){main{grid-template-columns:1fr}.intro{grid-column:auto}.preview{max-width:390px;margin:auto}aside{border-left:0;border-top:1px solid #d9ded1;padding:22px 0 0}}
+
+/* Photo calibration, 2026-09-09: C156 front photo and A004-V3
+   orthographic drawing. Positions are normalized to each module face.
+   Orthographic front view only; no thickness or perspective projection. */
+.device{background:#92958f;border-radius:3.8% / 1.9%;box-shadow:none;isolation:isolate}
+.core{border:0;border-radius:7.4%;background:linear-gradient(140deg,#f1f1ed,#bdc0ba 49%,#e2e3df);box-shadow:0 2px 0 #8a8e89,0 5px 3px #20251f50,inset 1px 1px 1px #fff;overflow:hidden}
+.core::before{content:"";position:absolute;inset:1.3%;border-radius:6.5%;background:linear-gradient(142deg,#383a39 0%,#121413 37%,#070908 80%);box-shadow:inset 0 0 0 1px #656863,inset 1px 1px 3px #a2a69d55;pointer-events:none}
+.core::after{content:"";position:absolute;inset:1.8%;border-radius:6.5%;background:linear-gradient(135deg,#fff1,transparent 42%);pointer-events:none}
+.screen{left:12.37%;top:21.3%;width:75.26%;border:0;box-shadow:0 0 0 1px #050705;z-index:1}
+.sensors{inset:0;display:block;height:100%;pointer-events:none}
+.sensors i{position:absolute;top:87.7%;width:1.3%;height:1.3%;aspect-ratio:1;background:#0b0e0b;box-shadow:inset 0 0 0 .5px #30362e}
+.sensors i:nth-child(1){left:23.3%}
+.sensors .camera{left:46.8%;top:86%;width:6.4%;height:6.4%;background:radial-gradient(circle,#0b1718 0 19%,#172221 20% 32%,#080b09 33% 49%,#4c4837 50% 58%,#171b15 59% 73%,#323a2c 74%);box-shadow:none}
+.sensors i:nth-child(3){left:61.5%;top:88%;width:2%;height:2%;background:#1d231b}
+.sensors i:nth-child(4){left:66%;top:88%;width:2%;height:2%;background:#171d15}
+.sensors i:nth-child(5){left:76%;top:87.7%}
+.controls{border-top:0;border-radius:0 0 9% 9%;background:linear-gradient(110deg,#c6c8c5,#bfc2bf 60%,#b2b6b2);box-shadow:inset 2px 0 2px #eceee8,inset -2px -3px 2px #858b83,inset 0 5px 2px #969c9555}
+.controls::before{content:"";position:absolute;inset:2px 1.2% 1.5%;border:1px solid #d2d5ce;border-top-color:#9b9f97;border-radius:0 0 8% 8%;pointer-events:none}
+.dpad{left:9.2%;top:17.5%;width:33%;height:33%}
+.dpad button{width:35%;height:38%;background:linear-gradient(135deg,#343936,#252a27);color:transparent;border-radius:16%;box-shadow:inset 1px 1px 1px #60655d, inset -1px -1px 1px #0a100d;filter:drop-shadow(0 1px 1px #0008)}
+.dpad #up{left:32.5%;top:0;clip-path:polygon(10% 0,90% 0,100% 65%,50% 100%,0 65%)}
+.dpad #down{left:32.5%;bottom:0;clip-path:polygon(50% 0,100% 35%,90% 100%,10% 100%,0 35%)}
+.dpad #left{left:0;top:32.5%;width:38%;height:35%;clip-path:polygon(0 10%,65% 0,100% 50%,65% 100%,0 90%)}
+.dpad #right{right:0;top:32.5%;width:38%;height:35%;clip-path:polygon(0 50%,35% 0,100% 10%,100% 90%,35% 100%)}
+.actions button,.utility button{width:9.6%;height:9.6%;background:radial-gradient(circle at 38% 30%,#414743,#303630 70%,#1e251f 95%);box-shadow:0 1.5px 1px #20271f,0 0 0 1px #9aa093,inset 0 1px 1px #697064}
+.actions #a{left:84.2%;top:27%}.actions #b{left:65.5%;top:34.5%}
+.utility #select{left:34%;top:78.2%}.utility #start{left:56%;top:78.2%}
+.actions span,.utility span{color:#646d62;text-shadow:0 .5px #e3e7df;font-weight:700;font-family:Arial,sans-serif;font-style:italic;top:-55%}
+.actions span{font-size:3cqw}.utility span{font-size:2.4cqw;letter-spacing:0}
+.device-brand{bottom:3.3%;font-family:Arial,sans-serif;font-weight:800;font-style:italic;font-size:3.2cqw;letter-spacing:-.5px;color:#6c7568;text-shadow:0 .5px #dfe4d8}
+.device button:active{filter:brightness(.8);box-shadow:inset 0 1px 2px #080d08;translate:0 1px}
+.core{box-shadow:inset 1px 1px 1px #fff}
