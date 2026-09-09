@@ -8,4 +8,6 @@
 
 当前 [PRD](Lunar_Physical_AI_Companion_v1.0_PRD.md) 已同步架构修订；旧方案归档供参考，不覆盖当前路线。
 
+核心体验入口：[自主生活与小旅行](docs/14-自主生活与小旅行总览.md) · [人格、关系与分层记忆](docs/12-人格关系与分层记忆系统.md)。
+
 记忆设计参考 [Ombre Brain](https://github.com/P0luz/Ombre-Brain)，具体采用方式、差异和源码依据见 [记忆实现方案](docs/13-Ombre-Brain参考与记忆实现方案.md)。目前为设计参考，尚未集成其代码。
